@@ -11,6 +11,7 @@
   [(ngModel)]="serverName">
 <!-- <p>{{ serverName }}</p> -->
 <!-- Property Binding in [] and Event Binding in () interpolation -->
+<br>
 <button
   class="btn btn-primary"
   [disabled]="!allowNewServer"
@@ -19,6 +20,7 @@
 <!-- String interpolation -->
 <!-- <p>{{ serverCreationStatus }}</p> -->
 <!-- Structural Directive example -->
+<h3>Server Components</h3>
+<hr>
 <p *ngIf="serverCreated">Server was created, server name is {{ serverName }}</p>
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor="let server of servers"></app-server>
