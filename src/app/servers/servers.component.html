@@ -17,6 +17,8 @@
   (click)="onCreateServer()">Add Server</button>
 <!-- <p [innerText]="allowNewServer"></p> -->
 <!-- String interpolation -->
-<p>{{ serverCreationStatus }}</p>
+<!-- <p>{{ serverCreationStatus }}</p> -->
+<!-- Structural Directive example -->
+<p *ngIf="serverCreated">Server was created, server name is {{ serverName }}</p>
 <app-server></app-server>
 <app-server></app-server>
